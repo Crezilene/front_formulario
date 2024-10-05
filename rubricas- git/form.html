@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="content-language" content="pt-br" />
+    <meta name="robots" content="index, follow" />
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts-icones.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+    <title>Ficha de Rubricas</title>
+
+    <style>
+        .form_row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .small-text {
+            font-size: 0.8em; /* Tamanho do texto menor */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="main_header container">
+        <div class="content">
+
+            <div class="main_header_logo">
+                <img src="img/logo.png" alt="logo.png" title="Connecta" />
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main_content container">
+
+        <section class="section-seu-codigo container">
+
+            <div class="content">
+
+                <div class="box-artigo">
+
+                    <!--Inícia Formulário-->
+
+                    <div class="container_form">
+
+                        <h1>Rubricas</h1>
+
+                        <form class="form" action="#" method="post">
+
+                            <div class="form_grupo">
+                                <label for="rubrica" class="form_label">Rubrica</label>
+                                <input type="text" name="rubrica" class="form_input" id="rubrica" placeholder="Insira a rubrica" required>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_grupo">
+                                    <label for="numero" class="form_label">ID <span class="small-text">(Número)</span></label>
+                                    <input type="number" name="numero" class="form_input" id="numero" placeholder="Insira o número da rubrica" required>
+                                </div>
+
+                                <div class="form_grupo">
+                                    <label for="cpf" class="form_label">CPF</label>
+                                    <input type="text" name="cpf" class="form_input" id="cpf" maxlength="11" placeholder="Insira somente os números" required>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_grupo">
+                                    <label for="consignato" class="form_label">Tipo consignação <span class="small-text">(Numérico)</span></label>
+                                    <input type="number" name="consignato" class="form_input" id="consignato" placeholder="Insira o tipo consignação" required>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_grupo">
+                                    <span class="legenda">Permite empréstimo?</span>
+                                    <div class="radio-btn">
+                                        <input type="radio" class="form_new_input" id="emprestimo_sim" name="emprestimo" value="1" required>
+                                        <label for="emprestimo_sim" class="radio_label form_label"> <span class="radio_new_btn"></span> Sim</label>
+                                    </div>
+
+                                    <div class="radio-btn">
+                                        <input type="radio" class="form_new_input" id="emprestimo_nao" name="emprestimo" value="0">
+                                        <label for="emprestimo_nao" class="radio_label form_label"> <span class="radio_new_btn"></span> Não</label>
+                                    </div>
+                                </div>
+
+                                <div class="form_grupo">
+                                    <span class="legenda">Impacta na margem?</span>
+                                    <div class="radio-btn">
+                                        <input type="radio" class="form_new_input" id="margem_sim" name="margem" value="1" required>
+                                        <label for="margem_sim" class="radio_label form_label"> <span class="radio_new_btn"></span> Sim</label>
+                                    </div>
+
+                                    <div class="radio-btn">
+                                        <input type="radio" class="form_new_input" id="margem_nao" name="margem" value="0">
+                                        <label for="margem_nao" class="radio_label form_label"> <span class="radio_new_btn"></span> Não</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_grupo">
+                                    <label for="rubrica_credito" class="form_label">Tipo de rubrica <span class="small-text">(Crédito)</span></label>
+                                    <select name="rubrica_credito" class="form_input" id="rubrica_credito" required>
+                                        <option value=""></option>
+                                        <option value="1">Fixo</option>
+                                        <option value="2">Variável</option>
+                                    </select>
+                                </div>
+
+                                <div class="form_grupo">
+                                    <label for="rubrica_debito" class="form_label">Tipo de rubrica <span class="small-text">(Débito)</span></label>
+                                    <select name="rubrica_debito" class="form_input" id="rubrica_debito" required>
+                                        <option value=""></option>
+                                        <option value="1">Compulsório</option>
+                                        <option value="2">Facultativo</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_grupo">
+                                    <label for="verba_variavel" class="form_label">Verba variável</label>
+                                    <select name="verba_variavel" class="form_input" id="verba_variavel" required>
+                                        <option value=""></option>
+                                        <option value="0">Não</option>
+                                        <option value="1">Sim</option>
+                                    </select>
+                                </div>
+
+                                <div class="form_grupo">
+                                    <label for="verba_temporaria" class="form_label">Verba temporária</label>
+                                    <select name="verba_temporaria" class="form_input" id="verba_temporaria" required>
+                                        <option value=""></option>
+                                        <option value="0">Não</option>
+                                        <option value="1">Sim</option>
+                                        <option value="2">Férias</option>
+                                        <option value="3">Gratificação Natalina</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_grupo">
+                                    <label for="banco" class="form_label">Banco <span class="small-text">(Código do Banco)</span></label>
+                                    <input type="text" name="banco" class="form_input" id="banco" placeholder="Insira o código do banco" required>
+                                </div>
+                            </div>
+
+                            <div class="form_message">
+                                <label for="message" class="form_message_label">Observações:</label>
+                                <textarea name="mensagem" id="message" cols="30" rows="3" class="form_input message_input"></textarea>
+                            </div>
+
+                            <div class="submit">
+                                <input type="hidden" name="acao" value="enviar">
+                                <button type="submit" name="Submit" class="submit_btn">Enviar</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
